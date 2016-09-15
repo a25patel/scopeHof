@@ -1,3 +1,4 @@
+"use strict"
 /*
   In p1, you should have gotten a message similar to this:
 
@@ -8,9 +9,9 @@
 ==========================================
 
   What is a "ReferenceError"?
-    The ReferenceError object represents an error when 
+    The ReferenceError object represents an error when
     a non-existent variable is referenced.
-  
+
   For more details:
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
  */
@@ -30,7 +31,7 @@ function accessOuterScope() {
     newGlobal = localOne;
 }
 
-doesNotLeakVariables();
+accessOuterScope();
 console.log("newGlobal: " + newGlobal); // What will print here?
 
 // Because local scopes have access to their "enclosing" scopes,

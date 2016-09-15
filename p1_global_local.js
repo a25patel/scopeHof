@@ -1,3 +1,4 @@
+"use strict"
 /* In JavaScript there are 3 kinds of scope:
  *   global, local, and block
  *
@@ -12,11 +13,11 @@
 var globalOne = "This variable is in 'global' scope";
 var globalTwo = "This is also in global scope";
 
-// The two above variables can be accessed 
+// The two above variables can be accessed
 // inside of any function in this script.
 // Try it:
 function hasOuterScope() {
-    // Prove that we can access globalOne 
+    // Prove that we can access globalOne
     // and globalTwo from inner scope.
 }
 
@@ -29,17 +30,17 @@ function doesNotLeakVariables() {
 // line is uncommented and executed, then try it!
 // var newGlobal = localOne;
 
-// What happened? Did you guess correctly? 
+// What happened? Did you guess correctly?
 // Inner scopes are invisible to outer scopes!
 
-// The term "local scope" always applies to functions. 
+// The term "local scope" always applies to functions.
 // The third kind of scope is called "block scope".
-// Block scope behaves just like local scope, but for 
-// ANY set of curly braces not just the ones for 
+// Block scope behaves just like local scope, but for
+// ANY set of curly braces not just the ones for
 // a function's body. Contrast these two examples:
 
 for(var x = 0; x < 10; x++) {
-    // Do nothing, we care about i
+    // Do nothing, we care about x
 }
 console.log(x); // What will print?
 
