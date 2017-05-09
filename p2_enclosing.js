@@ -1,20 +1,5 @@
-"use strict"
-/*
-  In p1, you should have gotten a message similar to this:
-
-==========================================
-  var newGlobal = localOne;
-                ^
-  ReferenceError: localOne is not defined
-==========================================
-
-  What is a "ReferenceError"?
-    The ReferenceError object represents an error when
-    a non-existent variable is referenced.
-
-  For more details:
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
- */
+// In programming, scopes can access other scopes, but there are rules for
+// which scopes a program can access from the current scope.
 
 // With reference errors in mind, predict what will happen
 // when lines 21 and 22 are executed.
@@ -34,7 +19,24 @@ function accessOuterScope() {
 accessOuterScope();
 console.log("newGlobal: " + newGlobal); // What will print here?
 
-// Because local scopes have access to their "enclosing" scopes,
-// we can access newGlobal from inside the function.
+// All scopes can access any of their "enclosing" scopes.
+// How many unique scopes exist in this function?
+// Can you draw a picture that explains which variable can be accessed from which scope?
+// Before you execute this code, can you predict what will be console.log'd and in what order?
+  // Try drawing the stack/heap diagram for this function's execution!
+outer()
+function outer() {
+  inner("First Call");
 
-// Move on to part 3.
+  for(var i = 0; i < 10; i++) {
+    console.log(i);
+  }
+
+  inner("Second Call");
+
+  function inner(parameter) {
+    if(i){
+      console.log(parameter)
+    }
+  }
+}

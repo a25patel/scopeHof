@@ -1,24 +1,15 @@
-"use strict"
 /* In JavaScript there are 3 kinds of scope:
  *   global, local, and block
- *
- * Block scope is new to JS 2015, and so requires the
- * "use strict" directive. Strict mode does *a lot*
- * so if you're curious about it, read more:
- *
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
  */
 
 // Why are these two variables considered global?
+// What is global scope"?
 var globalOne = "This variable is in 'global' scope";
 var globalTwo = "This is also in global scope";
 
-// The two above variables can be accessed
-// inside of any function in this script.
-// Try it:
+hasOuterScope();
 function hasOuterScope() {
-    // Prove that we can access globalOne
-    // and globalTwo from inner scope.
+    console.log(`${globalOne}`); // What will this print?
 }
 
 // This function contains a local variable.
@@ -48,3 +39,32 @@ for(let i = 0; i < 10; i++) {
     // Do nothing, we care about i
 }
 console.log(i) // What will print?
+
+// Lets put it together... what scope are the following variables in?
+// parameter: ?
+// a: ?
+// b: ?
+// c: ?
+// d: ?
+function scopesEverywhere(parameter){
+  var a = 10;
+  let b = 20;
+
+  if(a < b) {
+    var c = a + b;
+    let d = c + b;
+  }
+
+  // Can you write some code that throws a ReferenceError using any of a, b, c, or d?
+  // Which ones can't you use to create a ReferenceError?
+    // Why not?
+}
+
+/*
+  What is a "ReferenceError"?
+    The ReferenceError object represents an error when
+    a non-existent variable is referenced.
+
+  For more details:
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+ */

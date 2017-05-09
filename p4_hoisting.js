@@ -16,17 +16,19 @@ console.log(variable); // What happens?
 var variable = 12;
 console.log(variable); // What happens?
 
-/* 
+/*
  Hoisting applies to lines that start with the var keyword
- and also to lines that start with the function keyword. 
+ and also to lines that start with the function keyword.
 
- functions are "hoisted" complete with definition - which is why 
- line 9 and 11 behave identically. The function was "hoisted" to 
+ function declarations are "hoisted" complete with definition - which is why
+ line 9 and 11 behave identically. The function was "hoisted" to
  the very top of the current scope.
 
- vars are "hoisted" as well, but only the name is hoisted, not the
+ variables are "hoisted" as well, but only the name is hoisted, not the
  assignment statement. This is why line 15 printed undefined, but
- line 17 printed 12.
+ line 17 printed 12. Variables declared with var are hoisted to their nearest
+ local scope, variables declared with let or const are hoisted to their nearnest
+ block scope.
 
  With that in mind, which version of hosting applies to this?
  How might you prove it?
@@ -36,18 +38,10 @@ var functionExpression = function() {
 }
 
 /*
- Below is what the code above looks like
- after hoisting. Uncomment it to see it better!
+  Write a function that demonstrates how variables declared with let
+  are hoisted -- prove that they are not hoisted to the local scope,
+  also prove that they ARE hoisted within their own block scope
 */
-
-// function declaration() {
-//     return "declaration ran"
-// }
-// var variable;
-
-// console.log(declaration());
-// console.log(declaration());
-
-// console.log(variable);
-// variable = 12;
-// console.log(variable);
+function useBlockHoisting() {
+  
+}
