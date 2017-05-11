@@ -2,7 +2,7 @@
 // which scopes a program can access from the current scope.
 
 // With reference errors in mind, predict what will happen
-// when lines 21 and 22 are executed.
+// when lines 7 and 8 are executed.
 var notDefined;
 console.log("notDefined: " + notDefined);  // What happens?
 console.log("nonExistent: " + nonExistent); // What happens?
