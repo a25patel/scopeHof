@@ -21,7 +21,7 @@ function startTimers(array) {
   for(let i = 0; i < 10; i++) {
     array.push(i);
 
-    setTimeout(() => () {
+    setTimeout(() => {
         array.push(i);
       }, i * 1000);
   }
