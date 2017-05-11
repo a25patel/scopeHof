@@ -4,7 +4,7 @@
 
 function startTimers() {
   for(var i = 0; i < 10; i++) {
-      setTimeout(() => (whichTime) {
+      setTimeout((whichTime) => {
           console.log("You've been called.");
           console.log(`The value of i is: ${i}`);
           console.log(`The value of whichTime is: ${whichTime}`)
