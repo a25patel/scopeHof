@@ -38,10 +38,9 @@ var functionExpression = function() {
 }
 
 /*
-  Write a function that demonstrates how variables declared with let
-  are hoisted -- prove that they are not hoisted to the local scope,
-  also prove that they ARE hoisted within their own block scope
+  Write a function that demonstrates that variables declared with let
+  and var are "hoisted" very differently... see: https://rainsoft.io/variables-lifecycle-and-why-let-is-not-hoisted/
 */
 function useBlockHoisting() {
-  
+
 }
